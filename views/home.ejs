@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page</title>
+  <link rel="stylesheet" href="/css/home.css">
+</head>
+
+<body>
+  <div class="home-page">
+    <div class="header">
+      <div class="logo">
+        <img
+          src="/logo_and_name.svg"
+          alt="logo" />
+      </div>
+      
+      <div class="action-btn">
+        <form action="/auth/logout" method="get">
+        <input  type="submit" class="icon-block green" value="Logout">
+      </form>
+        <!-- <FontAwesomeIcon class='icon-block' icon={faQuestionCircle} />
+        <FontAwesomeIcon class='icon-block' icon={faExclamationCircle} />
+        <FontAwesomeIcon class='icon-block' icon={faCog} /> -->
+      </div>
+    </div>
+    <div class="body">
+      <div class="left-side">
+        <div class="content">
+          <h2>Premium video meetings. Now free for everyone.</h2>
+          <p>
+            We re-engineered the service that we built for secure business
+            meetings, Google Meet, to make it free and available for all.
+          </p>
+          <div class="action-btn">
+            <a href="/create-meeting">
+              <button class="btn green">
+                <!-- <FontAwesomeIcon class='icon-block' icon={faVideo} /> -->
+                New Meeting
+              </button>
+            </a>
+
+            <form action="/join" method="post" class="input-block">
+              <div class="input-section">
+                <!-- <FontAwesomeIcon class='icon-block' icon={faKeyboard} /> -->
+                <input type="text" placeholder="Enter a code or link" name="meeting" />
+              </div>
+              <button type="submit" class="btn green">Join</button>
+            </form>
+          </div>
+        </div>
+       
+      </div>
+
+      <div class="right-side">
+        <div class="content">
+           <div class="schedule">
+          <h1>
+            Schedule a Meeting
+          </h1>
+          <form class="form-class" onsubmit="event.preventDefault();">
+            <label class="label-text" for="meeting">Choose a time for your meeting:</label>
+
+            <input type="time" id="meeting" name="meetingTime" class="meetingTime"
+                   min=<%=curTime %>  max="23:59" required>
+                   <br><br>
+            <ul class="check-list"></ul>
+            <label class="label-text" for="email" name="emailAddresses" required>Enter E-mail addresses:</label>
+            <input type="email" name="emailAddresses" class="email-form" >
+            <button class="btn green" name="email-add" onclick="handleAdd();">Add
+            </button>
+            <br>
+            <br>
+            <button class="btn green" onclick=" handleSubmit()">Submit </button>
+          </form>
+        </div>
+        <script>
+          
+          async function handlelogout() {
+            const res = await fetch('auth/logout');         
+          }
+          let emails = [];
+          function handleAdd() {
+            const newEmail = document.querySelector('.email-form').value;
+            document.querySelector('.email-form').value = "";
+            emails.push(newEmail);
+            
+            document.querySelector('.check-list').innerHTML += `<li>${newEmail}</li> ` 
+          
+          }
+          async function handleSubmit() {
+            const time = document.querySelector('.meetingTime').value;
+            console.log(time);
+            const data = { 
+              meetingTime: time,
+              emailAddresses: emails
+             }
+             const response = await fetch('/schedule-meeting', {
+              method: 'POST',
+              mode: 'cors', 
+              cache: 'no-cache', 
+              credentials: 'same-origin', 
+              headers: {
+                'Content-Type': 'application/json'
+                
+              },
+              redirect: 'follow',
+              referrerPolicy: 'no-referrer', 
+              body: JSON.stringify(data) // 
+            });
+            window.location.reload();
+          }
+            
+        </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

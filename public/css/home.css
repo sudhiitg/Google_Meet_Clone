@@ -1,0 +1,291 @@
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  .header .logo {
+    display: flex;
+    align-items: center;
+    width: 124px;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 6%;
+  }
+  .header .logo img {
+    width: 100%;
+  }
+  .header .logo .help-text {
+    font-size: 22px;
+    padding-left: 4px;
+    color: #5f6368;
+  }
+  .header .action-btn {
+    display: flex;
+    align-items: center;
+    border: none;
+  }
+  .header .action-btn .icon-block {
+    font-size: 20px;
+    padding: 10px;
+    color: #5f6368;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 5%;
+  }
+  
+  .home-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  .home-page .body {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .home-page .body .left-side {
+    max-width: 500px;
+  }
+  
+  .home-page .body .left-side .content {
+    margin: 10px auto;
+    width: 100%;
+    height: 25rem;
+    background-color: #fff;
+    padding: 60px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+  }
+  
+  .home-page .body .left-side .content h2 {
+    font-size: 44px;
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+  .home-page .body .left-side .content p {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+  .home-page .body .left-side .content .action-btn {
+    margin-bottom: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .home-page .body .left-side .content .action-btn .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 5px;
+    color: #00796b;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .home-page .body .left-side .content .action-btn .btn .icon-block {
+    padding-right: 10px;
+  }
+  .home-page .body .left-side .content .action-btn .btn:hover {
+    background: #f6faf9;
+  }
+  .home-page .body .left-side .content .action-btn .input-block {
+    margin-left: 20px;
+    display: flex;
+    flex: 1;
+  }
+  .home-page .body .left-side .content .action-btn .input-block .input-section {
+    position: relative;
+    margin-right: 10px;
+  }
+  .home-page
+    .body
+    .left-side
+    .content
+    .action-btn
+    .input-block
+    .input-section
+    .icon-block {
+    position: absolute;
+    top: 50%;
+    transform: translate(10px, -50%);
+    color: #5f6368;
+  }
+  .home-page
+    .body
+    .left-side
+    .content
+    .action-btn
+    .input-block
+    .input-section
+    input {
+    font-size: 16px;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 35px;
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+  }
+  .home-page .body .left-side .help-text {
+    margin-top: 30px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+  }
+  .home-page .body .left-side .help-text a {
+    text-decoration: none;
+    color: #00796b;
+  }
+  .home-page .body .right-side .content {
+    margin: 20px auto;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.33);
+  }
+  .home-page .body .right-side .content img {
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .green {
+    background: #00796b !important;
+    color: #fff !important;
+    font-weight: 500 !important;
+  }
+  .green:hover {
+    background: #00685c !important;
+  }
+  
+  .schedule h1 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+  
+  .label-text {
+    font-size: 18px;
+    font-weight: 300;
+  }
+  
+  .meetingTime {
+    margin-left: 3rem;
+    padding: 0 20px;
+    border: 1px solid #ccc;
+  }
+  
+  .check-list {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+  
+  .check-list li {
+    position: relative;
+    list-style-type: none;
+    padding-left: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+  }
+  
+  .check-list li:before {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 0;
+      top: -2px;
+      width: 5px;
+      height: 11px;
+      border-width: 0 2px 2px 0;
+      border-style: solid;
+      border-color: #00a8a8;
+      transform-origin: bottom left;
+      transform: rotate(45deg);
+  }
+  
+  
+  .btn{
+  
+    font-size: 16px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 5px;
+    color: #00796b;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'arial', heletica, sans-serif;
+    font-size: 12px;
+    background: #1a1b41
+      url('https://static.tumblr.com/03fbbc566b081016810402488936fbae/pqpk3dn/MRSmlzpj3/tumblr_static_bg3.png')
+      repeat 0 0;
+    -webkit-animation: 10s linear 0s normal none infinite animate;
+    -moz-animation: 10s linear 0s normal none infinite animate;
+    -ms-animation: 10s linear 0s normal none infinite animate;
+    -o-animation: 10s linear 0s normal none infinite animate;
+    animation: 10s linear 0s normal none infinite animate;
+  }
+  
+  @-webkit-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @-moz-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @-ms-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @-o-keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
+  
+  @keyframes animate {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: 500px 0;
+    }
+  }
