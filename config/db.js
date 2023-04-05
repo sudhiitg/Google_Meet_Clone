@@ -5,7 +5,7 @@ const Room = require("../models/room")
 
 const connectDB = async () => {
     try {
-        
+
         
         const conn = await mongoose.connect(process.env.MONGO_URI);
         console.log(`MongoDb Atlas connected: ${conn.connection.host}`.cyan.bold);
