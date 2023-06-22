@@ -4,9 +4,9 @@
 <h2>Features</h2>
 <ul>
   <li>User registration and authentication</li>
+
   <li>Create and join meeting rooms</li>
-  <li>Create and join meeting rooms</li>
-  <li>Video and audio communication</li>
+
   <li>Video and audio communication</li>
   <li>Screen sharing</li>
   <li>Chat messaging</li>
